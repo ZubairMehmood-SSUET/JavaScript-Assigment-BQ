@@ -1,100 +1,63 @@
-// 1. Check if string contains "JavaScript"
-const str1 = "Hello, Welcome to JavaScript!";
-function containsJavaScript(str) {
-    return str.includes("JavaScript");
-}
-console.log("Program 1:", containsJavaScript(str1)); // true
+alert("Welcome to JavaScript Assignment BQ!");
 
+//  String Questions
+//  Check if string contains 'JavaScript'
+ let text1 = "Hello, welcome to JavaScript!";
+ console.log(text1.includes("JavaScript")); // true
 
-// 2. Convert string to uppercase
-let text2 = "hello world";
-function toUpperCase(str) {
-  return str.toUpperCase();
-}
-console.log("Program 2:", toUpperCase(text2)); // "HELLO WORLD"
+//  Convert 'hello world' to uppercase
+ let text2 = "hello world";
+ console.log(text2.toUpperCase()); // HELLO WORLD
 
+//  Remove spaces from ' Learn JS '
+ let text3 = " Learn JS ";
+ console.log(text3.trim()); // "Learn JS"
 
-// 3. Remove leading and trailing spaces
-const str3 = " Learn JS ";
-function trimString(str) {
-  return str.trim();
-}
-console.log("Program 3:", trimString(str3)); // "Learn JS"
+//  Compare 'React' and 'react' ignoring case
+ let str1 = "React";
+ let str2 = "react";
+ console.log(str1.toLowerCase() === str2.toLowerCase()); // true
 
-
-// 4. Compare two strings ignoring case
-let str4a = "React";
-let str4b = "react";
-function compareStrings(str1, str2) {
-  return str1.toLowerCase() == str2.toLowerCase();
-}
-console.log("Program 4:", compareStrings(str4a, str4b)); // true
-
-
-// 5. Count vowels in a string
-let text5 = "JavaScript is fun";
 function countVowels(str) {
-  const vowels = "aeiouAEIOU";
+  let vowels = "aeiouAEIOU"; // both cases
   let count = 0;
-  for (let char of str) {
-    if (vowels.includes(char)) {
+
+  for (let i = 0; i < str.length; i++) {
+    if (vowels.includes(str[i])) {
       count++;
     }
   }
   return count;
 }
-console.log("Program 5:", countVowels(text5)); // 6
 
+console.log(countVowels("JavaScript is Fun")); // 5
 
-// 6. Extract domain from email
-const email = "user@example.com";
-function extractDomain(email) {
-  return email.split("@")[1];
-}
-console.log("Program 6:", extractDomain(email)); // "example.com"
+//  Extract domain from email
+let email = "user@example.com";
+let atIndex = email.indexOf("@"); // find @ position
+let domain = email.slice(atIndex + 1); // take after @
+console.log(domain); // example.com
 
+//  Greeting by time
+ let hour = 15;
+ if (hour < 12) console.log("Good morning");
+ else if 
+  (hour < 18) console.log("Good afternoon");
+ else 
+  console.log("Good evening");
 
-// 7. Greeting based on hour
-let hour = 15; // Example input
-function greetByHour(hour) {
-  if (hour < 12) {
-    return "Good morning";
-  } else if (hour >= 12 && hour <= 18) {
-    return "Good afternoon";
-  } else {
-    return "Good evening";
-  }
-}
-console.log("Program 7:", greetByHour(10)); // "Good morning"
-console.log("Program 7:", greetByHour(15)); // "Good afternoon" 
-console.log("Program 7:", greetByHour(20)); // "Good evening"
+//  Check strong password
+ let password = "pass1234";
+ if (password.length >= 8 && /\d/.test(password))
+  console.log("Strong");
+ else 
+  console.log("Weak");
 
+//  Replace spaces with dashes
+let text = "Learn JavaScript step by step";
+let updatedText = text.replaceAll(" ", "-");
+console.log(updatedText); // Output: Learn-JavaScript-step-by-step
 
-// 8. Check password strength
-let password = "myPass123";
-function checkPassword(password) {
-  const hasNumber = /\d/; 
-  if (password.length >= 8 && hasNumber.test(password)) {
-    return "Strong";
-  } else {
-    return "Weak";
-  }
-}
-console.log("Program 8:", checkPassword("myPass123")); // "Strong"
-console.log("Program 8:", checkPassword("myPass")); // "Weak"
-
-
-// 9. Replace spaces with hyphens
-let str9 = "Learn JavaScript step by step";
-function hyphenate(str) {
-  return str.split(" ").join("-");
-}
-console.log("Program 9:", hyphenate(str9)); // "Learn-JavaScript-step-by-step"
-
-
-// 10. Check if string starts with "F"
-let str10 = "Frontend";
-function startsWithF(str) {
-  return str.startsWith("F");
-}
-console.log("Program 10:", startsWithF(str10)); // true
+//  Check if starts with F
+ let text6 = "Frontend";
+ console.log(text6.startsWith("F")); // true
